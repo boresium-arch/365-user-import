@@ -1,6 +1,9 @@
 # 365-user-import
 A set of PowerShell scripts for Office 365 user import.
 
+## Plan and usage guide
+See [docs/365-user-import-guide.md](docs/365-user-import-guide.md) for input validation, schema mapping, prerequisites, error handling, and examples.
+
 # function
 Installs and uses the ImportExcel PowerShell module from the PowerShell Gallery.
 Installs and uses the Microsoft Graph PowerShell module.
@@ -9,7 +12,10 @@ The orchestration script prompts the user for the domain name and the remote dom
 Creates new Office 365 users from a list of users in an Excel file.
 
 # excel file fields
-FirstName, LastName, DisplayName, Department, Office, ManagerName, UserAlias, TemplateUser, Password
+COMPANY, OU, FirstName, DisplayName, LastName, DEPARTMENT, OFFICE, JOBTITLE, DESCRIPTION, MANAGERNAME, UserAlias, UPN, TEMPLATEUSER, Password
 
-# calculated fields
-OrganizationalUnit for a new user is found using the OU of the TemplateUser
+# field notes
+- OU: Organizational unit path (can be left empty to derive from TEMPLATEUSER)
+- UPN: Full User Principal Name including domain (e.g., user@grymca.org)
+- TEMPLATEUSER: UPN of template user to copy groups and licenses from
+- DESCRIPTION: Additional user description field
