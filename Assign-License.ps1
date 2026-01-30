@@ -4,13 +4,13 @@
 
 .DESCRIPTION
     Retrieves the license SKU from the template user and assigns it to the new user.
-    Uses Microsoft Graph PowerShell instead of legacy MSOnline module.
+    Uses Microsoft Graph PowerShell for modern authentication and license management.
 
 .PARAMETER UPN
     User Principal Name of the user to license
 
 .PARAMETER TemplateUser
-    Template user whose license SKU should be copied
+    Template user whose license SKU should be copied (AD username or UPN)
 
 .PARAMETER UsageLocation
     Usage location for the user (default: US)
@@ -63,7 +63,7 @@ try {
     Update-MgUser -UserId $UPN -UsageLocation $UsageLocation -ErrorAction Stop
     Write-Host "      ✓ Usage location set" -ForegroundColor Green
     
-    # Resolve template user UPN from AD username
+    # Resolve template user and get their license
     Write-Host "    → Resolving template user license..."
     
     try {
@@ -108,4 +108,4 @@ try {
 catch {
     Write-Error "Failed to process license for $UPN : $_"
     throw
-} 
+}

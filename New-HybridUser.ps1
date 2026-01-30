@@ -30,6 +30,12 @@
 .PARAMETER Office
     Office location of the new user
 
+.PARAMETER Description
+    Description of the new user
+
+.PARAMETER Company
+    Company name for the new user
+
 .PARAMETER ManagerName
     Display name or UPN of the manager to assign
 
@@ -41,9 +47,6 @@
 
 .PARAMETER Password
     Initial password (SecureString)
-
-.PARAMETER Domain
-    Primary domain (e.g., contoso.com)
 
 .PARAMETER RemoteDomain
     Remote routing domain (e.g., contoso.mail.onmicrosoft.com)
@@ -71,6 +74,10 @@ Param(
     
     [string]$Office,
     
+    [string]$Description,
+    
+    [string]$Company,
+    
     [string]$ManagerName,
     
     [Parameter(Mandatory=$true)]
@@ -81,9 +88,6 @@ Param(
     
     [Parameter(Mandatory=$true)]
     [SecureString]$Password,
-    
-    [Parameter(Mandatory=$true)]
-    [string]$Domain,
     
     [Parameter(Mandatory=$true)]
     [string]$RemoteDomain
@@ -98,7 +102,7 @@ try {
         Name = $DisplayName
         FirstName = $FirstName
         LastName = $LastName
-        OnPremisesOrganizationalUnit = $OU
+        OrganizationalUnit = $OU
         UserPrincipalName = $UPN
         Password = $Password
         ResetPasswordOnNextLogon = $true  # Enforce password reset on first login
@@ -112,90 +116,90 @@ try {
     New-RemoteMailbox @NewMailboxParams -ErrorAction Stop | Out-Null
     Write-Host "    ✓ Remote mailbox created" -ForegroundColor Green
     
-    # Set additional attributes (JobTitle, Department, Office)
+    # Set additional attributes (JobTitle, Department, Office, Description, Company)
     if (-not [string]::IsNullOrWhiteSpace($JobTitle) -or 
         -not [string]::IsNullOrWhiteSpace($Department) -or 
-        -not [string]::IsNullOrWhiteSpace($Office)) {
+        -not [string]::IsNullOrWhiteSpace($Office) -or
+        -not [string]::IsNullOrWhiteSpace($Description) -or
+        -not [string]::IsNullOrWhiteSpace($Company)) {
         
         Write-Host "  → Setting user attributes..."
         
-        $SetUserParams = @{}
-        if ($JobTitle) { $SetUserParams['Title'] = $JobTitle }
-        if ($Department) { $SetUserParams['Department'] = $Department }
-        if ($Office) { $SetUserParams['Office'] = $Office }
+        $SetUserParams = @{
+            Identity = $UPN
+        }
         
-        Set-ADUser -Identity $UserAlias @SetUserParams -ErrorAction Stop
+        if (-not [string]::IsNullOrWhiteSpace($JobTitle)) { $SetUserParams['Title'] = $JobTitle }
+        if (-not [string]::IsNullOrWhiteSpace($Department)) { $SetUserParams['Department'] = $Department }
+        if (-not [string]::IsNullOrWhiteSpace($Office)) { $SetUserParams['Office'] = $Office }
+        if (-not [string]::IsNullOrWhiteSpace($Description)) { $SetUserParams['Description'] = $Description }
+        if (-not [string]::IsNullOrWhiteSpace($Company)) { $SetUserParams['Company'] = $Company }
+        
+        Set-AdUser @SetUserParams -ErrorAction Stop
         Write-Host "    ✓ Attributes set" -ForegroundColor Green
     }
     
-    # Get group membership from template user
-    Write-Host "  → Copying group membership from template user..."
+    # Copy group membership from template user
+    Write-Host "  → Copying group(s) from template..."
     
-    $UserGroups = @()
-    $UserGroups = (Get-ADUser -Identity $TemplateUser -Properties MemberOf -ErrorAction Stop).MemberOf
+    $TemplateGroups = Get-AdUser -Identity $TemplateUser -ErrorAction Stop | Get-AdMemberOf -ErrorAction Stop
     
-    if ($UserGroups.Count -gt 0) {
-        # Add the new user into the same groups as the template user
-        $GroupCount = 0
-        foreach ($Group in $UserGroups) {
-            try {
-                Add-ADGroupMember -Identity $Group -Members $UserAlias -ErrorAction Stop
-                $GroupCount++
-            }
-            catch {
-                Write-Warning "    Could not add to group: $Group"
-            }
+    $GroupCount = 0
+    foreach ($Group in $TemplateGroups) {
+        try {
+            Add-AdGroupMember -Identity $Group -Members $UPN -ErrorAction Stop
+            $GroupCount++
         }
-        Write-Host "    ✓ Added to $GroupCount group(s)" -ForegroundColor Green
+        catch {
+            Write-Warning "  ! Failed to add $UPN to group $($Group.Name): $_"
+        }
     }
-    else {
-        Write-Host "    ⓘ Template user has no group memberships" -ForegroundColor Gray
-    }
+    Write-Host "    ✓ Copied $GroupCount group(s)" -ForegroundColor Green
     
     # Set manager if provided
     if (-not [string]::IsNullOrWhiteSpace($ManagerName)) {
         Write-Host "  → Setting manager..."
         
         try {
-            # Try to resolve manager by display name or UPN
-            $Manager = $null
-            
-            # First try as UPN
-            if ($ManagerName -match '@') {
-                $Manager = Get-ADUser -Filter "UserPrincipalName -eq '$ManagerName'" -ErrorAction SilentlyContinue
-            }
-            
-            # If not found, try as display name
-            if (-not $Manager) {
-                $Manager = Get-ADUser -Filter "DisplayName -eq '$ManagerName'" -ErrorAction SilentlyContinue
-            }
-            
-            # If still not found, try as SAMAccountName
-            if (-not $Manager) {
-                $Manager = Get-ADUser -Identity $ManagerName -ErrorAction SilentlyContinue
-            }
-            
-            if ($Manager) {
-                Set-ADUser -Identity $UserAlias -Manager $Manager.DistinguishedName -ErrorAction Stop
-                Write-Host "    ✓ Manager set to: $($Manager.DisplayName)" -ForegroundColor Green
-            }
-            else {
-                Write-Warning "    Could not find manager: $ManagerName"
-            }
+            $Manager = Get-AdUser -Identity $ManagerName -ErrorAction Stop
+            Set-AdUser -Identity $UPN -Manager $Manager -ErrorAction Stop
+            Write-Host "    ✓ Manager set ($($Manager.DisplayName))" -ForegroundColor Green
         }
         catch {
-            Write-Warning "    Failed to set manager: $_"
+            Write-Warning "  ! Failed to set manager: $_"
         }
     }
     
-    # Display final group membership
-    $FinalGroups = (Get-ADUser -Identity $UserAlias -Properties MemberOf).MemberOf
-    Write-Host "    ⓘ $UPN is now a member of $($FinalGroups.Count) group(s)" -ForegroundColor Gray
+    # Assign M365 license from template user
+    Write-Host "  → Assigning M365 license..."
     
+    try {
+        # Get template user's license SKU from M365
+        $TemplateM365User = Get-MgUser -Filter "userPrincipalName eq '$TemplateUser'" -ErrorAction Stop
+        $TemplateLicenses = Get-MgUserLicenseDetail -UserId $TemplateM365User.Id -ErrorAction Stop
+        
+        if ($TemplateLicenses.Count -gt 0) {
+            # Use first license SKU from template
+            $SkuId = $TemplateLicenses[0].SkuId
+            
+            # Wait for new user to appear in M365
+            Start-Sleep -Seconds 5
+            
+            $NewM365User = Get-MgUser -Filter "userPrincipalName eq '$UPN'" -ErrorAction Stop
+            Set-MgUserLicense -UserId $NewM365User.Id -AddLicenses @{SkuId = $SkuId} -RemoveLicenses @() -ErrorAction Stop
+            Write-Host "    ✓ License assigned" -ForegroundColor Green
+        }
+        else {
+            Write-Warning "  ! Template user has no licenses to copy"
+        }
+    }
+    catch {
+        Write-Warning "  ! Failed to assign license: $_"
+    }
+    
+    return $true
 }
 catch {
-    Write-Error "Failed to create user: $_"
-    throw
+    Write-Error "Failed to create user $UPN : $_"
+    return $false
 }
-
-# Note: After account provisioning, it can take several minutes for mailbox and other services to become available

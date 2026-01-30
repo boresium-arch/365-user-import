@@ -18,18 +18,15 @@ Start-ADSyncSyncCycle -PolicyType Delta
 Start-Sleep -Seconds 60
 
 #Cloud section requirements: 
-#Install the Microsoft Online Service Assistant for IT Professionals 
-#You must also have the Windows Azure Active Directory Module for PowerShell
+#Install the Microsoft Graph PowerShell module
+#Requires scopes: User.ReadWrite.All, Directory.ReadWrite.All
 
-#Get credentials for the MSOnline Service
-write-host "Input your admin credentials for Office 365"
-$MSOLCred = Get-Credential
-
-#Connect to the MSOnline Service
-write-host "Connecting to MSOnline"
-Import-Module MSOnline
-Connect-MsolService -Credential $MSOLCred
+#Connect to Microsoft Graph
+write-host "Connecting to Microsoft Graph"
+Import-Module Microsoft.Graph.Users
+Import-Module Microsoft.Graph.Users.Actions
+Connect-MgGraph -Scopes "User.ReadWrite.All", "Directory.ReadWrite.All" -NoWelcome
 
 #Bulk-assign licenses in Office 365 using CSV import
 write-host "Assigning user licenses and activating the mailboxes"
-IMPORT-CSV GXPimport.csv | ForEach-Object { ./Assign-License.PS1 -UPN $_.UPN -AccountSkuId $_.AccountSkuId }
+IMPORT-CSV GXPimport.csv | ForEach-Object { ./Assign-License.PS1 -UPN $_.UPN -TemplateUser $_.TemplateUser }

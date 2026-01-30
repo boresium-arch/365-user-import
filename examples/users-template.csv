@@ -1,3 +1,3 @@
-COMPANY,OU,FirstName,DisplayName,LastName,DEPARTMENT,OFFICE,JOBTITLE,DESCRIPTION,MANAGERNAME,UserAlias,UPN,TEMPLATEUSER,Password
-MFB,grymca.org/New OU Structure/Mary Free Bed Y/106 - Health & Wellness,Avery,Avery Johnson,Johnson,Finance,MFB,Financial Analyst,Financial Analyst,Jacob DeLosh,avery.johnson,avery.johnson@grymca.org,dhunsberger@grymca.org,P@ssw0rd!
-MFB,grymca.org/New OU Structure/Mary Free Bed Y/106 - Health & Wellness,Chris,Chris Lee,Lee,IT,MFB,IT Specialist,IT Specialist,Jacob DeLosh,chris.lee,chris.lee@grymca.org,dhunsberger@grymca.org,P@ssw0rd!
+FirstName,LastName,DisplayName,JobTitle,Department,Office,ManagerName,UserAlias,TemplateUser,Password
+Avery,Johnson,Avery Johnson,Financial Analyst,Finance,Seattle,Jordan Smith,avery.johnson,template.user,P@ssw0rd!
+Chris,Lee,Chris Lee,Systems Engineer,IT,Portland,Jordan Smith,chris.lee,template.user,P@ssw0rd!
