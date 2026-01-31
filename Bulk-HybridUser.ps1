@@ -182,6 +182,7 @@ foreach ($Row in $Rows) {
 		$ouParts = $parts | Where-Object { $_ -like 'OU=*' } | ForEach-Object { $_.Substring(3) }
 		[array]::Reverse($ouParts)
 		$OrganizationalUnit = $domain + '/' + ($ouParts -join '/')
+		$OrganizationalUnit = $OrganizationalUnit.Replace(" ", "` ")  # Escape spaces
 		
 		catch {
 			throw "Invalid OU: $OrganizationalUnit. $_"
@@ -250,7 +251,7 @@ foreach ($Row in $Rows) {
 				$GroupCount++
 			}
 			catch {
-				Write-Warning "  ! Failed to add $Upn to group $($Group.Name): $_"
+				Write-Warning "  ! Failed to add $Upn to group $($Group.Name) at line $($_.InvocationInfo.ScriptLineNumber): $_"
 			}
 		}
 		Write-Host "    ✓ Copied $GroupCount group(s)" -ForegroundColor Green
@@ -265,7 +266,7 @@ foreach ($Row in $Rows) {
 				Write-Host "    ✓ Manager set ($($Manager.DisplayName))" -ForegroundColor Green
 			}
 			catch {
-				Write-Warning "  ! Failed to set manager: $_"
+				Write-Warning "  ! Failed to set manager at line $($_.InvocationInfo.ScriptLineNumber): $_"
 			}
 		}
 		
@@ -334,13 +335,13 @@ foreach ($Row in $Rows) {
 			}
 		}
 		catch {
-			Write-Warning "  ! Failed to assign license: $_"
+			Write-Warning "  ! Failed to assign license at line $($_.InvocationInfo.ScriptLineNumber): $_"
 		}
 
 		$Created++
 	}
 	catch {
-		Write-Warning "Failed to create user $Upn : $_"
+		Write-Warning "Failed to create user $Upn at line $($_.InvocationInfo.ScriptLineNumber): $_"
 		$Failed++
 	}
 }
