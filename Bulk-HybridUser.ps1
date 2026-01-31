@@ -184,9 +184,6 @@ foreach ($Row in $Rows) {
 		$OrganizationalUnit = $domain + '/' + ($ouParts -join '/')
 		$OrganizationalUnit = $OrganizationalUnit.Replace(" ", "` ")  # Escape spaces
 		
-		catch {
-			throw "Invalid OU: $OrganizationalUnit. $_"
-		}
 		if ($TemplateUser -notmatch '@') {
 			if (-not $TemplateAdUser) {
 				$TemplateAdUser = Get-AdUser -Filter {UserPrincipalName -eq $TemplateUser} -Properties UserPrincipalName -ErrorAction Stop
