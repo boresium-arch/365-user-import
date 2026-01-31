@@ -1,0 +1,303 @@
+**********************
+PowerShell transcript start
+Start time: 20260130215114
+Username: ITG-MS-1953\Williamson
+RunAs User: ITG-MS-1953\Williamson
+Configuration Name: 
+Machine: ITG-MS-1953 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\Williamson\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2025.4.0' -BundledModulesPath 'c:\Users\Williamson\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2025.4.0
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Warning' -LogPath 'c:\Users\Williamson\AppData\Roaming\Code\logs\20260130T203321\window1\exthost\ms-vscode.powershell' -SessionDetailsPath 'c:\Users\Williamson\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-17924-827180.json' -FeatureFlags @() 
+Process ID: 17888
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Loading the PowerShell Snap-in for Exchange Management
+WARNING: Exchange snap-in could not be loaded. Ensure you are running in the Exchange Management Shell.
+Loading ImportExcel module
+Loading Microsoft Graph modules
+Found 1 user(s) to process from Excel
+Processing dbarnes@grymca.org
+  → Creating remote mailbox...
+WARNING: Failed to create user dbarnes@grymca.org : The term 'New-RemoteMailbox' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+\nSummary (On-Premises): Created=0  Skipped=0  Failed=1
+Running a delta sync from Azure AD Connect
+WARNING: Start-ADSyncSyncCycle failed or not available. Ensure Azure AD Connect is installed.
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+PS>CommandInvocation(Remove-Variable): "Remove-Variable"
+>> ParameterBinding(Remove-Variable): name="Name"; value="__psEditorServices_DebugServer"
+>> ParameterBinding(Remove-Variable): name="Force"; value="True"
+PS>CommandInvocation(Set-Variable): "Set-Variable"
+>> ParameterBinding(Set-Variable): name="Name"; value="__psEditorServices_DebugServer"
+>> ParameterBinding(Set-Variable): name="Value"; value="OmniSharp.Extensions.DebugAdapter.Server.DefaultDebugAdapterServerFacade"
+>> ParameterBinding(Set-Variable): name="Description"; value="DO NOT USE: for internal use only."
+>> ParameterBinding(Set-Variable): name="Scope"; value="Global"
+>> ParameterBinding(Set-Variable): name="Option"; value="ReadOnly"
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+PS>. 'C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import\Bulk-HybridUser.ps1'
+Loading the PowerShell Snap-in for Exchange Management
+WARNING: Exchange snap-in could not be loaded. Ensure you are running in the Exchange Management Shell.
+Loading ImportExcel module
+Loading Microsoft Graph modules
+Found 1 user(s) to process from Excel
+Processing dbarnes@grymca.org
+  → Creating remote mailbox...
+WARNING: Failed to create user dbarnes@grymca.org : The term 'New-RemoteMailbox' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+\nSummary (On-Premises): Created=0  Skipped=0  Failed=1
+Running a delta sync from Azure AD Connect
+WARNING: Start-ADSyncSyncCycle failed or not available. Ensure Azure AD Connect is installed.
+\nFinal Summary: Created=0  Skipped=0  Failed=1
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+PS>CommandInvocation(Remove-Variable): "Remove-Variable"
+>> ParameterBinding(Remove-Variable): name="Name"; value="__psEditorServices_DebugServer"
+>> ParameterBinding(Remove-Variable): name="Force"; value="True"
+PS>CommandInvocation(Set-Variable): "Set-Variable"
+>> ParameterBinding(Set-Variable): name="Name"; value="__psEditorServices_DebugServer"
+>> ParameterBinding(Set-Variable): name="Value"; value="OmniSharp.Extensions.DebugAdapter.Server.DefaultDebugAdapterServerFacade"
+>> ParameterBinding(Set-Variable): name="Description"; value="DO NOT USE: for internal use only."
+>> ParameterBinding(Set-Variable): name="Scope"; value="Global"
+>> ParameterBinding(Set-Variable): name="Option"; value="ReadOnly"
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+PS>. 'C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import\Bulk-HybridUser.ps1'
+Loading the PowerShell Snap-in for Exchange Management
+PS>TerminatingError(): "Exchange snap-in could not be loaded. Ensure you are running in the Exchange Management Shell."
+>> TerminatingError(): "Exchange snap-in could not be loaded. Ensure you are running in the Exchange Management Shell."
+Exchange snap-in could not be loaded. Ensure you are running in the Exchange Management Shell.
+Exception: C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import\Bulk-HybridUser.ps1:73:2
+Line |
+  73 |      throw "Exchange snap-in could not be loaded. Ensure you are runni …
+     |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Exchange snap-in could not be loaded. Ensure you are running in the
+     | Exchange Management Shell.
+
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+PS>CommandInvocation(Remove-Variable): "Remove-Variable"
+>> ParameterBinding(Remove-Variable): name="Name"; value="__psEditorServices_DebugServer"
+>> ParameterBinding(Remove-Variable): name="Force"; value="True"
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B
+]633;A]633;P;Cwd=C:\x5cUsers\x5cWilliamson\x5cOneDrive\x5cDocuments\x5cGitHub\x5c365-user-import\x5c365-user-importPS C:\Users\Williamson\OneDrive\Documents\GitHub\365-user-import\365-user-import> ]633;B

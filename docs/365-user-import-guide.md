@@ -6,7 +6,6 @@
   - Import the Microsoft Graph PowerShell module.
   - Connect to Microsoft Graph and Exchange/AD as required for a hybrid environment
   - Read from the Excel input and create Microsoft 365 users.
-  - 
 
 ## 2) Required input validation
 Validate these inputs before any changes are made:
@@ -21,24 +20,29 @@ Validation checklist:
 
 ## 3) Excel schema and calculated fields
 Required columns (case-insensitive):
+- COMPANY
+- OU
 - FirstName
-- LastName
 - DisplayName
-- JobTitle
-- Department
-- Office
-- ManagerName
+- LastName
+- DEPARTMENT
+- OFFICE
+- JOBTITLE
+- DESCRIPTION
+- MANAGERNAME
 - UserAlias
-- TemplateUser
+- UPN
+- TEMPLATEUSER
 - Password
 
 Calculated fields:
-- OrganizationalUnit (OU) should be derived by looking up the OU of the `TemplateUser` in local AD.
+- `OU` should be derived by looking up the OU of the `TemplateUser` in local AD when blank.
 
 Mapping notes:
-- `UserAlias` becomes the UPN prefix (e.g., user@domain).
+- `UPN` is required and must include the domain (e.g., user@domain).
+- `UserAlias` becomes the mailbox/AD alias.
 - `DisplayName` should be used as-is when provided; otherwise derive from FirstName + LastName.
-- `ManagerName` should be resolved to an AD or Graph user for manager assignment.
+- `ManagerName` should be resolved to an AD user for manager assignment.
 - `Password` should be used only for initial set; enforce reset at first sign-in.
 
 ## 4) Prerequisites, setup, and execution steps
@@ -57,13 +61,14 @@ Setup:
 2. Ensure you can authenticate to Microsoft Graph with required scopes.
 
 Execution (typical flow):
-1. Prompt for domain, remote domain, and Excel file path.
+1. Prompt for domain, remote domain, and Excel file path (place live inputs in `runtime/`).
 2. Validate inputs and schema.
 3. Read Excel rows and map fields.
-4. Resolve TemplateUser OU.
-5. Create users in Microsoft 365 and set attributes.
-6. Assign manager and set initial password policy.
-7. Assign a Microsoft 365 license sku the same as TemplateUser's license sku.
+4. Resolve TemplateUser OU (if OU not provided).
+5. Create on-premises users and set attributes.
+6. Assign manager and copy groups from TemplateUser.
+7. Trigger Azure AD Connect sync.
+8. Assign a Microsoft 365 license SKU matching the TemplateUser.
 
 ## 5) Error handling and logging notes
 Error handling:

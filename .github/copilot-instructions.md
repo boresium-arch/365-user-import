@@ -1,7 +1,19 @@
 # 365-user-import AI Coding Instructions
 
 ## Project Purpose
-This project creates Office 365 users from Excel templates in a **hybrid Exchange environment** (Microsoft 365 + local AD). The orchestration script reads user data from Excel, derives organizational units from template users in local AD, and provisions new users in Microsoft 365.
+This project creates Office 365 users from Excel files in a **hybrid Exchange environment** (Microsoft 365 + local AD). The orchestration script reads user data from Excel, derives organizational units from template users in local AD, and provisions new users in Microsoft 365. Licenses are assigned based on the template user's existing Microsoft 365 license. The solution emphasizes robust input validation, error handling, and logging to ensure reliable bulk user creation.
+
+## Technical Requirements and Constraints ##
+- **PowerShell 7+**: Leverage modern PowerShell features and modules.
+- **ImportExcel module**: For reading Excel files without needing Excel installed.
+- **Microsoft Graph PowerShell**: For Microsoft 365 user and license management.
+- **Local AD access**: To resolve TemplateUser OUs.
+- **Excel file schema**: Fixed structure with required columns; no deviations allowed.
+- **Error handling**: Fail fast on critical errors, skip invalid rows with warnings, log all actions.
+- **Logging**: Comprehensive logging of all operations, including a final summary.
+- **Documentation-first**: All scripts and modules must be well-documented; see the provided guide.
+- **Hybrid environment support**: Must function correctly in environments with both Microsoft 365 and on-premises Active Directory.
+- **Template-based provisioning**: New users inherit attributes and licenses from specified template usersa
 
 ## Architecture & Data Flow
 1. **Input**: Excel file with user data including COMPANY, OU, FirstName, DisplayName, LastName, DEPARTMENT, OFFICE, JOBTITLE, DESCRIPTION, MANAGERNAME, UserAlias, UPN, TEMPLATEUSER, Password

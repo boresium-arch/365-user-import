@@ -1,7 +1,7 @@
 # Sample run (illustrative)
 
 1. Script prompts for:
-   - Excel path: C:\path\to\GXP IMPORT.xlsx
+   - Excel path: C:\path\to\runtime\GXP IMPORT.xlsx
 
 2. Validation:
    - File exists: ✓
