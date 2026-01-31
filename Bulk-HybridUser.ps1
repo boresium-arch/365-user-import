@@ -1,6 +1,6 @@
 ﻿[CmdletBinding()]
 Param(
-	[string]$ExcelPath,
+	[string]$CsvPath,
 	[string]$UsageLocation = "US"
 )
 
@@ -10,35 +10,59 @@ Param(
 
 $ErrorActionPreference = "Stop"
 
-if (-not $ExcelPath) {
+# Check and install required modules
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12   
+$RequiredModules = @('Microsoft.Graph.Users', 'Microsoft.Graph.Users.Actions')
+foreach ($Module in $RequiredModules) {
+    if (-not (Get-Module -Name $Module -ListAvailable)) {
+        Write-Host "Installing module: $Module"
+        Install-Module -Name $Module -Scope CurrentUser -Force -ErrorAction Stop
+    }
+}
+
+# Load Exchange snap-in
+try {
+    Write-Host "Loading the PowerShell Snap-in for Exchange Management"
+    Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn -ErrorAction Stop
+}
+catch {
+    throw "Exchange snap-in could not be loaded. Ensure you are running in the Exchange Management Shell."
+}
+
+# Import modules
+Write-Host "Loading Microsoft Graph modules"
+Import-Module Microsoft.Graph.Users -ErrorAction Stop
+Import-Module Microsoft.Graph.Users.Actions -ErrorAction Stop
+
+if (-not $CsvPath) {
 	try {
 		Add-Type -AssemblyName System.Windows.Forms -ErrorAction Stop
 		$Dialog = New-Object System.Windows.Forms.OpenFileDialog
-		$Dialog.Filter = "Excel Files (*.xlsx)|*.xlsx|All Files (*.*)|*.*"
-		$Dialog.Title = "Select Excel file"
+		$Dialog.Filter = "CSV Files (*.csv)|*.csv|All Files (*.*)|*.*"
+		$Dialog.Title = "Select CSV file"
 		$Dialog.InitialDirectory = (Join-Path $PSScriptRoot "runtime")
 		$Dialog.Multiselect = $false
 
 		if ($Dialog.ShowDialog() -eq [System.Windows.Forms.DialogResult]::OK) {
-			$ExcelPath = $Dialog.FileName
+			$CsvPath = $Dialog.FileName
 		}
 	}
 	catch {
 		Write-Warning "File picker unavailable. Falling back to input dialog."
 	}
 
-	if (-not $ExcelPath) {
+	if (-not $CsvPath) {
 		Add-Type -AssemblyName Microsoft.VisualBasic -ErrorAction SilentlyContinue
-		$ExcelPath = [Microsoft.VisualBasic.Interaction]::InputBox("Enter the Excel path (.xlsx)", "Excel Path Input", "")
+		$CsvPath = [Microsoft.VisualBasic.Interaction]::InputBox("Enter the CSV path (.csv)", "CSV Path Input", "")
 	}
 }
 
-if (-not (Test-Path -Path $ExcelPath)) {
-	throw "Excel path not found: $ExcelPath"
+if (-not (Test-Path -Path $CsvPath)) {
+	throw "CSV path not found: $CsvPath"
 }
 
-if ([System.IO.Path]::GetExtension($ExcelPath) -ne ".xlsx") {
-	throw "Excel file must have .xlsx extension: $ExcelPath"
+if ([System.IO.Path]::GetExtension($CsvPath) -ne ".csv") {
+	throw "CSV file must have .csv extension: $CsvPath"
 }
 
 $LogDir = Join-Path $PSScriptRoot "logs"
@@ -48,21 +72,6 @@ if (-not (Test-Path -Path $LogDir)) {
 
 $LogPath = Join-Path $LogDir ("bulk-run-{0:yyyyMMdd-HHmmss}.log" -f (Get-Date))
 Start-Transcript -Path $LogPath -Append | Out-Null
-
-try {
-	Write-Host "Loading the PowerShell Snap-in for Exchange Management"
-	Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
-}
-catch {
-	throw "Exchange snap-in could not be loaded. Ensure you are running in the Exchange Management Shell."
-}
-
-Write-Host "Loading ImportExcel module"
-Import-Module ImportExcel -ErrorAction Stop
-
-Write-Host "Loading Microsoft Graph modules"
-Import-Module Microsoft.Graph.Users -ErrorAction Stop
-Import-Module Microsoft.Graph.Users.Actions -ErrorAction Stop
 
 Write-Host "Connecting to Microsoft Graph"
 Connect-MgGraph -Scopes "User.ReadWrite.All", "Directory.ReadWrite.All", "Domain.Read.All" -NoWelcome
@@ -85,14 +94,14 @@ if (-not $RemoteDomain) {
     }
 }
 
-$Rows = Import-Excel -Path $ExcelPath -ErrorAction Stop
+$Rows = Import-Csv -Path $CsvPath -ErrorAction Stop
 
 if (-not $Rows -or $Rows.Count -eq 0) {
-	throw "No rows found in Excel file: $ExcelPath"
+	throw "No rows found in CSV file: $CsvPath"
 }
 
 $RequiredColumns = @(
-	"COMPANY", "OU", "FIRSTNAME", "DISPLAYNAME", "LASTNAME",
+	"COMPANY", "FIRSTNAME", "DISPLAYNAME", "LASTNAME",
 	"DEPARTMENT", "OFFICE", "JOBTITLE", "DESCRIPTION", "MANAGERNAME",
 	"USERALIAS", "UPN", "TEMPLATEUSER", "PASSWORD"
 )
@@ -110,14 +119,14 @@ if ($MissingColumns.Count -gt 0 -or $UnexpectedColumns.Count -gt 0) {
 	if ($UnexpectedColumns.Count -gt 0) {
 		Write-Error "Unexpected columns present: $($UnexpectedColumns -join ', ')"
 	}
-	throw "Excel schema does not match required columns."
+	throw "CSV schema does not match required columns."
 }
 
 $Created = 0
 $Skipped = 0
 $Failed = 0
 
-Write-Host "Found $($Rows.Count) user(s) to process from Excel"
+Write-Host "Found $($Rows.Count) user(s) to process from CSV"
 
 foreach ($Row in $Rows) {
 	$Upn = $Row.UPN
@@ -157,23 +166,29 @@ foreach ($Row in $Rows) {
 	try {
 		$SecurePassword = ConvertTo-SecureString -String $PasswordPlain -AsPlainText -Force
 
-		# Resolve OU from template user if not provided
-		if ([string]::IsNullOrWhiteSpace($Row.OU)) {
-			Write-Host "  → Resolving OU from template user..."
-			$TemplateAdUser = Get-AdUser -Identity $TemplateUser -Properties DistinguishedName, UserPrincipalName -ErrorAction Stop
-			$Row.OU = $TemplateAdUser.DistinguishedName -replace '^CN=.*?,'
+		# Resolve OU from template user
+		Write-Host "  → Resolving OU from template user..."
+		$TemplateAdUser = Get-AdUser -Filter {UserPrincipalName -eq $TemplateUser} -Properties DistinguishedName, UserPrincipalName -ErrorAction Stop
+		$OrganizationalUnit = $TemplateAdUser.DistinguishedName -replace '^CN=.*?,'
 		
-			if ([string]::IsNullOrWhiteSpace($Row.OU)) {
-				throw "Failed to resolve OU from template user: $TemplateUser"
-			}
-			Write-Host "    ✓ Resolved OU: $($Row.OU)" -ForegroundColor Green
+		if ([string]::IsNullOrWhiteSpace($OrganizationalUnit)) {
+			throw "Failed to resolve OU from template user: $TemplateUser"
 		}
 		
-		# Resolve template user UPN for Graph if needed
-		$TemplateUserUpn = $TemplateUser
+		# Convert DN to canonical name
+		$parts = $OrganizationalUnit -split ','
+		$domainParts = $parts | Where-Object { $_ -like 'DC=*' } | ForEach-Object { $_.Substring(3) }
+		$domain = $domainParts -join '.'
+		$ouParts = $parts | Where-Object { $_ -like 'OU=*' } | ForEach-Object { $_.Substring(3) }
+		[array]::Reverse($ouParts)
+		$OrganizationalUnit = $domain + '/' + ($ouParts -join '/')
+		
+		catch {
+			throw "Invalid OU: $OrganizationalUnit. $_"
+		}
 		if ($TemplateUser -notmatch '@') {
 			if (-not $TemplateAdUser) {
-				$TemplateAdUser = Get-AdUser -Identity $TemplateUser -Properties UserPrincipalName -ErrorAction Stop
+				$TemplateAdUser = Get-AdUser -Filter {UserPrincipalName -eq $TemplateUser} -Properties UserPrincipalName -ErrorAction Stop
 			}
 			$TemplateUserUpn = $TemplateAdUser.UserPrincipalName
 		}
@@ -186,7 +201,7 @@ foreach ($Row in $Rows) {
 			Name = $DisplayName
 			FirstName = $Row.FirstName
 			LastName = $Row.LastName
-			OrganizationalUnit = $Row.OU
+			OrganizationalUnit = $OrganizationalUnit
 			UserPrincipalName = $Upn
 			Password = $SecurePassword
 			ResetPasswordOnNextLogon = $true  # Enforce password reset on first login
@@ -343,5 +358,7 @@ catch {
 #Start-Sleep -Seconds 60
 
 Write-Host "\nFinal Summary: Created=$Created  Skipped=$Skipped  Failed=$Failed" -ForegroundColor Green
+
+Read-Host "Press Enter to exit"
 
 Stop-Transcript | Out-Null

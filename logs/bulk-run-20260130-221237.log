@@ -37,3 +37,413 @@ Line |
 PS>CommandInvocation(Remove-Variable): "Remove-Variable"
 >> ParameterBinding(Remove-Variable): name="Name"; value="__psEditorServices_DebugServer"
 >> ParameterBinding(Remove-Variable): name="Force"; value="True"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-Module"
+>> TerminatingError(): "The pipeline has been stopped."
+>> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="UserAccountBroker.exe"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Application     UserAccountBroker.exe                              10.0.2262… C:\WINDOWS\system32\UserAccoun…
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Write-Host"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Write-Host                                         7.0.0.0    Microsoft.PowerShell.Utility
+
+PS>CommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Write-Host"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+>> TerminatingError(): "The pipeline has been stopped."
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="UserPrincipalName"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Write-Host"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+
+NAME
+    Write-Host
+
+SYNTAX
+    Write-Host [[-Object] <Object>] [-NoNewline] [-Separator <Object>] [-ForegroundColor {Black | DarkBlue | DarkGreen |
+    DarkCyan | DarkRed | DarkMagenta | DarkYellow | Gray | DarkGray | Blue | Green | Cyan | Red | Magenta | Yellow | White}]
+    [-BackgroundColor {Black | DarkBlue | DarkGreen | DarkCyan | DarkRed | DarkMagenta | DarkYellow | Gray | DarkGray | Blue
+    | Green | Cyan | Red | Magenta | Yellow | White}] [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Write-Host -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=2097137.
+
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="UserPrincipalName"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="R"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           r -> Invoke-History
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Repla"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="replace.exe"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Application     replace.exe                                        10.0.2262… C:\WINDOWS\system32\replace.exe
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Replace"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Application     replace.exe                                        10.0.2262… C:\WINDOWS\system32\replace.exe
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Replace"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Application     replace.exe                                        10.0.2262… C:\WINDOWS\system32\replace.exe
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Replace"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Application     replace.exe                                        10.0.2262… C:\WINDOWS\system32\replace.exe
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Replace"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Application     replace.exe                                        10.0.2262… C:\WINDOWS\system32\replace.exe
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="UserPrincipalName"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Replace"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Application     replace.exe                                        10.0.2262… C:\WINDOWS\system32\replace.exe
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Replace"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Application     replace.exe                                        10.0.2262… C:\WINDOWS\system32\replace.exe
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="replace.exe"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Application     replace.exe                                        10.0.2262… C:\WINDOWS\system32\replace.exe
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="r"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           r -> Invoke-History
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Write-Debug"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Write-Debug                                        7.0.0.0    Microsoft.PowerShell.Utility
+
+PS>CommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Write-Debug"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+
+NAME
+    Write-Debug
+
+SYNTAX
+    Write-Debug [-Message] <string> [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Write-Debug -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=2097132.
+
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Replace"
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Application     replace.exe                                        10.0.2262… C:\WINDOWS\system32\replace.exe
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Replace"
+
+CommandType     Name
+-----------     ----                                              
+Application     replace.exe
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Replace"
+
+CommandType     Name
+-----------     ----                                              
+Application     replace.exe
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Replace"
+
+CommandType     Name                                               Version    Sourc
+                                                                              e
+-----------     ----                                               -------    -----
+Application     replace.exe                                        10.0.2262… C:\W…
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Replace"
+
+CommandType     Name                                               Version    Sourc
+                                                                              e
+-----------     ----                                               -------    -----
+Application     replace.exe                                        10.0.2262… C:\W…
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Where-Object"
+
+CommandType     Name                                               Version    Sourc
+                                                                              e
+-----------     ----                                               -------    -----
+Cmdlet          Where-Object                                       7.5.0.500  Micr…
+
+PS>CommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Where-Object"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+>> TerminatingError(): "The pipeline has been stopped."
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+>> TerminatingError(): "The pipeline has been stopped."
+>> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+>> TerminatingError(): "The pipeline has been stopped."
+>> CommandInvocation(Get-Help): "Get-Help"
+>> ParameterBinding(Get-Help): name="Name"; value="Where-Object"
+>> ParameterBinding(Get-Help): name="Online"; value="False"
+>> ParameterBinding(Get-Help): name="ErrorAction"; value="Ignore"
+
+NAME
+    Where-Object
+
+SYNTAX
+    Where-Object [-Property] <string> [[-Value] <Object>] [-InputObject
+    <psobject>] [-EQ] [<CommonParameters>]
+
+    Where-Object [-FilterScript] <scriptblock> [-InputObject <psobject>]
+    [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CEQ [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -NE [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CNE [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -GT [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CGT [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -LT [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CLT [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -GE [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CGE [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -LE [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CLE [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -Like [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CLike [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -NotLike [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CNotLike [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -Match [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CMatch [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -NotMatch [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CNotMatch [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -Contains [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CContains [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -NotContains
+    [-InputObject <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CNotContains
+    [-InputObject <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -In [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CIn [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -NotIn [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -CNotIn [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -Is [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> [[-Value] <Object>] -IsNot [-InputObject
+    <psobject>] [<CommonParameters>]
+
+    Where-Object [-Property] <string> -Not [-InputObject <psobject>]
+    [<CommonParameters>]
+
+
+ALIASES
+    where
+    ?
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is
+    displaying only partial help.
+        -- To download and install Help files for the module that includes this
+    cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help
+    Where-Object -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=2096806.
+
+
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="Get-AdUser"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="UserPrincipalName"
+PS>CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="ErrorAction"; value="Ignore"
+>> ParameterBinding(Get-Command): name="Name"; value="ForEach-Object"
+
+CommandType     Name                                               Version    Sourc
+                                                                              e
+-----------     ----                                               -------    -----
+Cmdlet          ForEach-Object                                     7.5.0.500  Micr…
+
